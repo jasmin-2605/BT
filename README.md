@@ -294,7 +294,7 @@ void inDanhSach(List *plist)
     {
         while(node!=NULL)
         {
-            printf("%d\t%10s\t%5s\t%5.3f\t\n",node->stt,node->Msv,node->HoTen,node->Luong);
+            printf("%d\t%10s\t%7s\t\t%8.5f\n",node->stt,node->Msv,node->HoTen,node->Luong);
             node=node->next;
         }
     }
@@ -347,6 +347,7 @@ int main()
     TaoDanhSachLienKet(plist);
     do
     {
+
         printf("------------Menu-----------\n");
         printf("Chon 1 de nhap danh sach nhan vien \n");
         printf("Chon 2 de hien thi danh sach nhan vien\n");
@@ -402,7 +403,9 @@ int main()
             g++;
             break;
         }
+
     }
     while(g==0);
     return 0;
 }
+
