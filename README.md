@@ -1,6 +1,8 @@
 //bai 1
 
 
+
+
 #include <stdio.h>
 #include <conio.h>
 
@@ -205,12 +207,24 @@ int main()
 
    
     printf("\nDoc: ");
-    if(cng!=0) chucnghin(cng); printf(" ");
+    if(cng!=0&&ng==0) {
+	chucnghin(cng); printf(" nghin ");
+	}
+      else chucnghin(cng);
+	  
     if(ng!=0)  nghin(ng);      printf(" ");
-    if(t!=0)  tram(t);        printf(" ");
-    if(c!=0) chuc(c);        printf(" ");
+    if(t!=0)  {tram(t);        printf(" ") ;}
+	    else if(ng!=0&&t==0||cng!=0&&ng==0&&t==0&&dv!=0||cng!=0&&ng==0&&t==0&&c!=0||cng!=0&&ng!=0&&t==0&&c!=0) {
+		printf("Khong tram ");
+	}
+    if(c!=0) {
+	chuc(c);        printf(" ");
+	}else printf(" linh ");
     if(dv!=0) donvi(dv);      printf(" ");
-}
+    
+    }
+
+
 
 //bai 2
 
